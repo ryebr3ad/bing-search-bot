@@ -6,6 +6,7 @@
 	<groupId>org.ryebread</groupId>
 	<artifactId>bing-search-bot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<name>thiscouldchange</name>
 	<url>http://maven.apache.org</url>
@@ -17,7 +18,6 @@
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -34,5 +34,6 @@
     		<artifactId>selenium-java</artifactId>
 		</dependency>
 		
-	</dependencies>
+	</dependencies>	
+	
 </project>

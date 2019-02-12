@@ -23,13 +23,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class BingSearchBot {
 	
 	private static List<List<Integer>> searchQueries;
-	
 
 	public static void main(String args[]) throws AWTException, InterruptedException {
 		
 		System.setProperty("webdriver.edge.driver", "C:\\code\\MicrosoftWebDriver.exe");
 		WebDriver driver = new EdgeDriver();
-		Robot rob = new Robot();		
+		Robot rob = new Robot();
 		driver.get("http://www.bing.com");
 		Thread.sleep(1000);
 		
@@ -38,10 +37,7 @@ public class BingSearchBot {
 			Point searchBoxPoint = searchBox.getLocation();
 			rob.mouseMove(searchBoxPoint.getX(), searchBoxPoint.getY() + 90);
 			Thread.sleep(1000);
-			rob.mousePress(InputEvent.BUTTON1_MASK);
-			rob.mouseRelease(InputEvent.BUTTON1_MASK);
-			rob.mousePress(InputEvent.BUTTON1_MASK);
-			rob.mouseRelease(InputEvent.BUTTON1_MASK);
+			doubleClick(rob);
 			Thread.sleep(1000);
 			
 			List<Integer> searchQuery = searchQueries.get(i);
@@ -55,6 +51,13 @@ public class BingSearchBot {
 		}
 		driver.quit();
 		
+	}
+
+	private static void doubleClick(Robot rob) {
+		rob.mousePress(InputEvent.BUTTON1_MASK);
+		rob.mouseRelease(InputEvent.BUTTON1_MASK);
+		rob.mousePress(InputEvent.BUTTON1_MASK);
+		rob.mouseRelease(InputEvent.BUTTON1_MASK);
 	}
 	
 	static {
