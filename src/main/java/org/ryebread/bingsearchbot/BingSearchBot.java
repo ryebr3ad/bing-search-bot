@@ -63,48 +63,86 @@ public class BingSearchBot {
 	static {
 		
 		searchQueries = new ArrayList<List<Integer>>();
-		
+		//25
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_S, KeyEvent.VK_T}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_B, KeyEvent.VK_C, KeyEvent.VK_D}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_D, KeyEvent.VK_O, KeyEvent.VK_G}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_C, KeyEvent.VK_A, KeyEvent.VK_T}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_S, KeyEvent.VK_K}));
-		
+		//50
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_F, KeyEvent.VK_I, KeyEvent.VK_S, KeyEvent.VK_K}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_D, KeyEvent.VK_O, KeyEvent.VK_O, KeyEvent.VK_R}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_B, KeyEvent.VK_E, KeyEvent.VK_N}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_P, KeyEvent.VK_N, KeyEvent.VK_C}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_L, KeyEvent.VK_L}));
-		
+		//75
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_T, KeyEvent.VK_O, KeyEvent.VK_U, KeyEvent.VK_R}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_L, KeyEvent.VK_L}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_A, KeyEvent.VK_M}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_K, KeyEvent.VK_E, KeyEvent.VK_Y}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_S, KeyEvent.VK_L}));
-		
+		//100
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_V, KeyEvent.VK_E, KeyEvent.VK_S, KeyEvent.VK_T}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_B, KeyEvent.VK_C, KeyEvent.VK_R}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_D, KeyEvent.VK_O, KeyEvent.VK_M}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_C, KeyEvent.VK_A, KeyEvent.VK_R}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_S, KeyEvent.VK_L}));
-		
+		//125
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_P, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_C, KeyEvent.VK_A, KeyEvent.VK_R, KeyEvent.VK_E}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_G, KeyEvent.VK_G, KeyEvent.VK_G}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_L, KeyEvent.VK_L, KeyEvent.VK_L}));
-		
+		//150
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W, KeyEvent.VK_Q}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E, KeyEvent.VK_R}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_M, KeyEvent.VK_M, KeyEvent.VK_M}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_L, KeyEvent.VK_M, KeyEvent.VK_N}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_P, KeyEvent.VK_P, KeyEvent.VK_O}));
+		//175
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_R, KeyEvent.VK_R, KeyEvent.VK_W, KeyEvent.VK_Q}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_Q, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_R}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_M, KeyEvent.VK_R, KeyEvent.VK_M}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_L, KeyEvent.VK_M, KeyEvent.VK_C}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_P, KeyEvent.VK_A, KeyEvent.VK_E}));
+		//200
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_S, KeyEvent.VK_S, KeyEvent.VK_Q}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_Q, KeyEvent.VK_R, KeyEvent.VK_S, KeyEvent.VK_S}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_Z, KeyEvent.VK_Z, KeyEvent.VK_M}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_L, KeyEvent.VK_B, KeyEvent.VK_B}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_P, KeyEvent.VK_E, KeyEvent.VK_A}));
+		//225
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_A, KeyEvent.VK_M}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_C, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_A, KeyEvent.VK_M}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_L, KeyEvent.VK_O, KeyEvent.VK_P, KeyEvent.VK_E}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_L, KeyEvent.VK_O, KeyEvent.VK_R, KeyEvent.VK_A}));
+		//250
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_F, KeyEvent.VK_L, KeyEvent.VK_O, KeyEvent.VK_R, KeyEvent.VK_A}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_O, KeyEvent.VK_R, KeyEvent.VK_E}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_N, KeyEvent.VK_O, KeyEvent.VK_R, KeyEvent.VK_E}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_D, KeyEvent.VK_T, KeyEvent.VK_X, KeyEvent.VK_R, KeyEvent.VK_E}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_O, KeyEvent.VK_O, KeyEvent.VK_P}));
+		//275
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_P}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_C, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_P}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_A, KeyEvent.VK_A, KeyEvent.VK_R, KeyEvent.VK_D}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_A, KeyEvent.VK_K}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_A, KeyEvent.VK_K, KeyEvent.VK_E}));
+		//300
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_V, KeyEvent.VK_I, KeyEvent.VK_O, KeyEvent.VK_L, KeyEvent.VK_A}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_G, KeyEvent.VK_E, KeyEvent.VK_A, KeyEvent.VK_R, KeyEvent.VK_S}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_U, KeyEvent.VK_L, KeyEvent.VK_F, KeyEvent.VK_U, KeyEvent.VK_R}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_U, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_U, KeyEvent.VK_R}));
+		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_P, KeyEvent.VK_L, KeyEvent.VK_E}));
 		
+		
+		//Bing 20
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_A, KeyEvent.VK_S, KeyEvent.VK_D, KeyEvent.VK_F}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_D, KeyEvent.VK_F, KeyEvent.VK_F, KeyEvent.VK_F}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_I}));
 		searchQueries.add(Arrays.asList(new Integer[]{KeyEvent.VK_P, KeyEvent.VK_O, KeyEvent.VK_U}));
-
+	
 	}
 	
 }
