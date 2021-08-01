@@ -25,7 +25,7 @@ public class BingSearchBot {
 
 	public static void main(String args[]) throws AWTException, InterruptedException {
 		
-		System.setProperty("webdriver.edge.driver", "C:\\code\\MicrosoftWebDriver.exe");
+		System.setProperty("webdriver.edge.driver", "C:\\code\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		Robot rob = new Robot();
 		driver.get("http://www.bing.com");
@@ -35,12 +35,16 @@ public class BingSearchBot {
 		int numberOfLoops = numberOfLoops();
 		sqg.generate(numberOfLoops);
 		List<Integer> searchQuery = sqg.next();
+		int backspaceCount = 0;
 		while(searchQuery != null) {
 			WebElement searchBox = driver.findElement(By.id("sb_form_q"));
-			Point searchBoxPoint = searchBox.getLocation();
-			rob.mouseMove(searchBoxPoint.getX(), searchBoxPoint.getY() + 90);
+			searchBox.click();
 			Thread.sleep(1000);
-			doubleClick(rob);
+			for(int i = 0; i < backspaceCount; i++) {
+				rob.keyPress(KeyEvent.VK_BACK_SPACE);
+				Thread.sleep(100);
+			}
+			
 			Thread.sleep(1000);
 			
 			for(int j = 0; j < searchQuery.size(); j++) {
@@ -49,21 +53,16 @@ public class BingSearchBot {
 			}
 			rob.keyPress(KeyEvent.VK_ENTER);
 			Thread.sleep(2000);
+			backspaceCount = searchQuery.size();
 			searchQuery = sqg.next();
 		}
+		
 		driver.quit();
 		
 	}
 	
 	private static int numberOfLoops() {
 		return Constants.TOTAL_POINTS / Constants.POINTS_PER_SEARCH;
-	}
-
-	private static void doubleClick(Robot rob) {
-		rob.mousePress(InputEvent.BUTTON1_MASK);
-		rob.mouseRelease(InputEvent.BUTTON1_MASK);
-		rob.mousePress(InputEvent.BUTTON1_MASK);
-		rob.mouseRelease(InputEvent.BUTTON1_MASK);
 	}
 	
 }
