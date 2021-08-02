@@ -2,7 +2,7 @@ package org.ryebread.bingsearchbot.test.query;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import org.ryebread.bingsearchbot.java.query.SearchQueryGenerator;
+import org.ryebread.bingsearchbot.query.SearchQueryGenerator;
 
 public class SearchQueryGeneratorTest {
 	
