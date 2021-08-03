@@ -21,7 +21,7 @@ public class PropertyVerificationTest {
 	}
 
 	@Test
-	public void testTotalPointsIsANumber() {
+	public void testPointPropertiesAreNumbers() {
 		assertDoesNotThrow(() -> {
 			Integer.parseInt(PropertyGetter.get(POINTS_PER_SEARCH));
 			Integer.parseInt(PropertyGetter.get(TOTAL_POINTS));
