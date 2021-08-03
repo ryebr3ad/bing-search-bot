@@ -3,15 +3,14 @@ package org.ryebread.bingsearchbot;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.ryebread.bingsearchbot.query.SearchQueryGenerator;
+
+import static org.ryebread.bingsearchbot.PropertyGetter.*;
 
 /**
  * Use Robot and Selenium to do quick hits of the Bing search page in order to amass points so I can get Amazon bucks.
@@ -21,19 +20,10 @@ import org.ryebread.bingsearchbot.query.SearchQueryGenerator;
  */
 public class BingSearchBot {
 
-	private static Properties props;
-	
-	static {
-		props = new Properties();
-		try {
-			props.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("config.properties"));
-		} catch (IOException e) {
-			System.err.println("Error getting properties:" + e);
-		}
-	}
-	
+	private static final String WEBDRIVER_EDGE_DRIVER = "webdriver.edge.driver";
+
 	public static void main(String args[]) throws AWTException, InterruptedException {
-		System.setProperty("webdriver.edge.driver", props.getProperty("webdriver_location"));
+		System.setProperty(WEBDRIVER_EDGE_DRIVER, PropertyGetter.get(WEBDRIVER_LOCATION));
 		WebDriver driver = new EdgeDriver();
 		Robot rob = new Robot();
 		driver.get("http://www.bing.com");
@@ -70,8 +60,8 @@ public class BingSearchBot {
 	}
 
 	private static int numberOfLoops() {
-		return Integer.parseInt(props.getProperty("total_points")) / 
-				Integer.parseInt(props.getProperty("points_per_search"));
+		return Integer.parseInt(PropertyGetter.get(TOTAL_POINTS))
+				/ Integer.parseInt(PropertyGetter.get(POINTS_PER_SEARCH));
 	}
 
 }
