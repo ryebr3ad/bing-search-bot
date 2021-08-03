@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.ryebread.bingsearchbot.query.SearchQueryGenerator;
+import org.ryebread.bingsearchbot.query.model.SearchQuery;
 
 public class SearchQueryGeneratorTest {
 	
@@ -22,7 +23,7 @@ public class SearchQueryGeneratorTest {
 	public void testQuerySize() {
 		SearchQueryGenerator generator = new SearchQueryGenerator();
 		generator.generate(1);
-		List<Integer> query = generator.next();
+		SearchQuery query = generator.next();
 		assertTrue(query.size() >= SearchQueryGenerator.QUERY_SIZE_MIN);
 		assertTrue(query.size() <= SearchQueryGenerator.QUERY_SIZE_MAX);
 	}

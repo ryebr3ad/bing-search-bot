@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.ryebread.bingsearchbot.query.SearchQueryGenerator;
+import org.ryebread.bingsearchbot.query.model.SearchQuery;
 
 import static org.ryebread.bingsearchbot.PropertyGetter.*;
 
@@ -32,7 +33,7 @@ public class BingSearchBot {
 		SearchQueryGenerator sqg = new SearchQueryGenerator();
 		int numberOfLoops = numberOfLoops();
 		sqg.generate(numberOfLoops);
-		List<Integer> searchQuery = sqg.next();
+		SearchQuery searchQuery = sqg.next();
 		int backspaceCount = 0;
 		while (searchQuery != null) {
 			WebElement searchBox = driver.findElement(By.id("sb_form_q"));

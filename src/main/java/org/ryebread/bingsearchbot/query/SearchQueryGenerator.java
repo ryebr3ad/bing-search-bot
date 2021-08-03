@@ -6,23 +6,25 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import org.ryebread.bingsearchbot.query.model.SearchQuery;
+
 public class SearchQueryGenerator {
 
 	public static final int QUERY_SIZE_MIN = 4;
 	public static final int QUERY_SIZE_MAX = 10;
 
-	private List<List<Integer>> searchQueries;
+	private List<SearchQuery> searchQueries;
 
-	private Iterator<List<Integer>> iter;
+	private Iterator<SearchQuery> iter;
 
 	public void generate(int numberOfLoops) {
 
-		searchQueries = new ArrayList<List<Integer>>();
+		searchQueries = new ArrayList<SearchQuery>();
 		Random randSize = new Random();
 		Random randKey = new Random();
 		for (int i = 0; i < numberOfLoops; i++) {
 			int querySize = generateRandomNumberWithinRange(randSize, QUERY_SIZE_MIN, QUERY_SIZE_MAX);
-			List<Integer> query = new ArrayList<Integer>();
+			SearchQuery query = new SearchQuery();
 			for (int j = 0; j < querySize; j++) {
 				int keyChoice = generateRandomNumberWithinRange(randKey, KeyEvent.VK_A, KeyEvent.VK_Z);
 				query.add(keyChoice);
@@ -33,7 +35,7 @@ public class SearchQueryGenerator {
 		iter = searchQueries.iterator();
 	}
 
-	public List<Integer> next() {
+	public SearchQuery next() {
 		return iter.hasNext() ? iter.next() : null;
 	}
 
