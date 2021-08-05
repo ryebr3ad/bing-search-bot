@@ -6,4 +6,4 @@ The intent is to have this run as a task in Windows.  The easiest way to do this
   
 The user needs to be logged in for this to execute; for now, this is a necessary evil.
 
-Running this requires the Edge Web Driver which is located here: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/.  Version doesn't really matter, just make sure it's more recent.  Also ensure that the location of this file matches the location specified in the 'webdriver_location' property of `src/main/resources/config.properties`, either by updating the property to your location of choice or matching path set on the property.
+Running this requires the Edge Web Driver which is located here: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/.  Version doesn't really matter, just make sure it's more recent.  Also ensure that the location of this file matches the location specified in the 'webdriver_location' property of `src/main/resources/config.properties`, either by updating the property to your location of choice or matching the path set on the property.
