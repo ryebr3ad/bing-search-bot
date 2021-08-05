@@ -34,7 +34,7 @@ public class BingSearchBot {
 		int numberOfLoops = numberOfLoops();
 		sqg.generate(numberOfLoops);
 		SearchQuery searchQuery = sqg.next();
-		int backspaceCount = 0;
+		int backspaceCount = 0;		
 		while (searchQuery != null) {
 			WebElement searchBox = driver.findElement(By.id("sb_form_q"));
 			searchBox.click();
@@ -50,7 +50,8 @@ public class BingSearchBot {
 				rob.keyPress(searchQuery.get(j));
 				Thread.sleep(100);
 			}
-			rob.keyPress(KeyEvent.VK_ENTER);
+			WebElement searchForm = driver.findElement(By.id("sb_form"));
+			searchForm.submit();
 			Thread.sleep(2000);
 			backspaceCount = searchQuery.size();
 			searchQuery = sqg.next();
