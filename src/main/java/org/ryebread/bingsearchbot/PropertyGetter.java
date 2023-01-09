@@ -19,6 +19,7 @@ public class PropertyGetter {
 			props.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("config.properties"));
 		} catch (IOException e) {
 			System.err.println("Error getting properties:" + e);
+			System.exit(0);
 		}
 	}
 
